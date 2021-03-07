@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+
+<h2 align="center">เขียนข้อความ</h2>
+<form action="addform"method="GET">
+    {% csrf_token %}
+    <div class ="form-group">
+        <label for="">ชื่อบทความ</label>
+        <input type="text" class="form-control" name="name">
+     </div>
+     <div class="form-group">
+         <label for="">รายละเอียดบทความ</label>
+         <input type="text" class="form-control" name="description">
+     </div>
+     <input type="submit" value="บทความ" class="bts btn-primary">
+</form> 
+{% endblock %}
