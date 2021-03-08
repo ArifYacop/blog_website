@@ -3,17 +3,33 @@
 
 {% block content %}
 
-<h2 align="center">เขียนข้อความ</h2>
-<form action="addform"method="GET">
+<h2 align="center">สร้างโปรไฟล์ของคุณ</h2>
+<form action="addform"method="POST">
     {% csrf_token %}
     <div class ="form-group">
-        <label for="">ชื่อบทความ</label>
-        <input type="text" class="form-control" name="name">
+        <label for="">UserName</label>
+        <input type="text" class="form-control" name="username">
      </div>
      <div class="form-group">
-         <label for="">รายละเอียดบทความ</label>
-         <input type="text" class="form-control" name="description">
-     </div>
-     <input type="submit" value="บทความ" class="bts btn-primary">
+         <label for="">FirstName</label>
+         <input type="text" class="form-control" name="firstname">
+     </div>\
+     <div class="form-group">
+        <label for="">LastName</label>
+        <input type="text" class="form-control" name="lastname">
+    </div>
+    <div class="form-group">
+        <label for="">Email</label>
+        <input type="email" class="form-control" name="email">
+    </div>
+    <div class="form-group">
+        <label for="">Password</label>
+        <input type="password" class="form-control" name="password">
+    </div>
+    <div class="form-group">
+        <label for="">Re-password</label>
+        <input type="password" class="form-control" name="re-password">
+    </div>
+     <input type="submit" value="ลงทะเบียน" class="bts btn-primary">
 </form> 
 {% endblock %}

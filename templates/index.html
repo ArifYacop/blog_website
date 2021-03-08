@@ -2,23 +2,27 @@
 
 
 {% block content %}
+<h2 align="center">แสดงข้อมูลบทความ</h2>
 
-    <h3>welcome to my website</h3>
-    <p>by arif yacop</p>
-    <h3>หัวข้อ :{{name}}</h3>
-    <p>ชื่อผู้แต่ง : {{author}}</p>
-
-    <h2>FAMITY</h2>
-   <ul>
-        {% for tag in tags %}
-        <li>{{tag}}</li>
-        {% endfor %}
-    </ul>
-    <h2>ความนิยม</h2>
-    {% if rating > 3%}
-        <h3>ดีมาก</h3>
-    {% else %}
-        <h3>ไม่นิยม</h3>
-    {% endif %}
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">รหัสบทความ</th>
+        <th scope="col">บทความ</th>
+        <th scope="col">รายละเอียดบทความ</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for post in posts %}
+      <tr>
+        <th scope="row">{{post.id}}</th>
+        <td>{{post.name}}</td>
+        <td>{{post.desc}}</td>
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+  
 
 {% endblock %}
