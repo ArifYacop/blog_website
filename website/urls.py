@@ -22,6 +22,10 @@ urlpatterns = [
     path('Home',views.Home),
     path('page1',views.page1),
     path('createForm',views.createForm),
-    path('addform',views.addblog)
+    path('result',views.result),
+    path('addform',views.adduser),
+    path('loginForm',views.loginForm),
+    path('login',views.login),
+    path('logout',views.logout)
     
 ]

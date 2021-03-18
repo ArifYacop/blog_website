@@ -2,7 +2,19 @@
 
 
 {% block content %}
+<h2 align="center">เขียนบทความ </h2>
+<form action="result" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="">ชื่อบทความ</label>
+        <input type="text" class="form-control" name="name">
+    </div>
+    <div class="form-group">
+        <label for="">รายละอียดบทความ</label>
+        <input type="text" class="form-control" name="description">
+    </div>
+    <input type="submit" value="บันทึกบทความ" class="btn btn-success">
+</form>
 
-    <h2>ท่องเทียวภาคเหนือ</h2>
 
 {% endblock %}
